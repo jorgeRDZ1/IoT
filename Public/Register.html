@@ -1,0 +1,340 @@
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<!DOCTYPE html>
+<html lang="en">
+
+    <style>
+.imagelogo{
+    width: 100%;
+    height: 45px ;
+   margin:-650px;
+}
+.top-nav {
+    height: 80px;
+    transition: 0.5s ease-in;
+	-webkit-transition: 0.5s ease-in;
+	-moz-transition: 0.5s ease-in;
+    background-color: red;
+}
+.top-nav .navbar-nav li .nav-link {
+    color: #fff;
+    font-size: 14px;
+    padding:29px 15px 15px;
+    font-weight: 600;
+    text-transform: uppercase;
+    transition: 0.5s ease-in;
+	-webkit-transition: 0.5s ease-in;
+	-moz-transition: 0.5s ease-in;
+}
+.mySearchbar{
+	position:fixed;
+	top:0;
+	left:0;
+	height:60px;
+	width:100%;
+	background-color:#f6f6f6;
+	z-index:9999;
+	transition:ease 0.5s;
+	padding:5px 10px;
+}
+.mySearchbar form{
+	display:flex;
+	width:100%; 
+}
+.mySearchbar .custome-input{
+	width:100%;
+}
+.myclosebtn{
+	position:absolute;
+	top:10px;
+	left:10px;
+	color:#000;
+	font-size:16px;
+	box-shadow:0px 0px 0px;
+	border:0px;
+}
+.top-nav li a.nav-link:hover, .top-nav .nav-item.active a.nav-link{
+    color: #35cbdf;
+    transition: 0.5s ease-in;
+	-webkit-transition: 0.5s ease-in;
+	-moz-transition: 0.5s ease-in;
+}
+.top-nav .navbar-brand{
+	font-size: 28px;
+	color: #fff;
+	font-family: 'Montserrat', sans-serif;
+}
+.top-nav.light-header{
+	height: 60px;
+	background: #fff;
+	box-shadow: 0 0 10px rgba(0,0,0,0.23);
+	transition: 0.5s ease-in;
+	-webkit-transition: 0.5s ease-in;
+	-moz-transition: 0.5s ease-in;
+	z-index:99999;
+}
+.top-nav.light-header .navbar-brand{
+	color: #212121;
+}
+.top-nav.light-header .navbar-nav li .nav-link {
+    color: #212121;
+    padding: 10px 10px;
+    transition: 0.5s ease-in;
+	-webkit-transition: 0.5s ease-in;
+	-moz-transition: 0.5s ease-in;
+}
+.top-nav.light-header li a.nav-link:hover, .top-nav.light-header .nav-item.active a.nav-link{
+	border-bottom: 0px solid #35cbdf;
+    color: #35cbdf;
+    transition: 0.5s ease-in;
+	-webkit-transition: 0.5s ease-in;
+	-moz-transition: 0.5s ease-in;
+}
+.nav-item::after{content:'';display:block;width:0px;height:2px;background:#35cbdf;transition: 0.5s;}
+.nav-item:hover::after{width:100%;}
+.navbar-dark .navbar-nav .active > .nav-link, .navbar-dark .navbar-nav .nav-link.active, .navbar-dark .navbar-nav .nav-link.show, .navbar-dark .navbar-nav .show > .nav-link,.navbar-dark .navbar-nav .nav-link:focus, .navbar-dark .navbar-nav .nav-link:hover{color:#35cbdf;}
+.nav-link{padding:15px 5px;transition:0.2s;}
+.secound-head .navbar-nav li .nav-link{
+    color:#000;
+}
+/* start login page css */
+.secound-head .navbar-nav li .nav-link{
+	color:#000;
+}
+.secound-head .navbar-brand{
+	color:#000;
+}
+.secound-head.light-header{
+	position:fixed;
+	width:100%;
+	background:#fff;
+	z-index:99999;
+	transition:ease 0.5s;
+}
+.login-page{
+	background:white;  /* fallback for old browsers\
+	background: -webkit-linear-gradient(to bottom, #2399f4, #12D8FA, #1FA2FF);  /* Chrome 10-25, Safari 5.1-6 
+	background: linear-gradient(to bottom, #2399f4, #12D8FA, #1FA2FF); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+	padding:40px 0px;
+	min-height:450px;
+	position:relative;
+	display:inline-flex;
+	width:100%;
+	
+}
+.log-box{
+	border-radius:10px;
+	min-height:400px;
+	box-shadow:0px 0px 10px #ccc;
+	display:inline-block;
+	width:100%;
+}
+.logo-back{
+	
+	background-size: auto auto;
+	display: inline-block;
+	width: 100%;
+	min-height: 450px;
+	align-items: center;
+	justify-content: center;
+	height: 100%;
+	border-radius: 10px 0px 0px 10px;
+	background-repeat: no-repeat;
+	background-color: white;
+}
+.log-content{
+	padding:40px 20px 0px;
+	display:inline-block;
+	width:100%;
+	background-color:#fff;
+	min-height:460px;
+	border-radius:0px 10px 10px 0px;
+}
+.myr-top{
+	margin-top:5px;
+}
+.log-content .log-body{
+
+	font-weight: lighter;
+	margin-top:5px;
+}
+.log-content label{
+	margin:0px;
+	font-family:Poppins-R;
+	font-size:14px;
+	display:none;
+}
+.log-content .custom{
+	border-bottom:1px solid #000;
+	padding:10px 10px 10px 0px
+}
+.log-btn{
+	padding-bottom:0px;
+}
+.btn-theme1{
+	font-size:15px;
+	font-family:Poppins-R;
+	padding:5px 25px;
+	background-color:red;
+	color:#fff;
+	border:1px solid transparent;
+	border-radius:50px;
+	transition:ease 0.5s;
+}
+.btn-theme1:hover{
+	color:#35cbdf;
+	background-color:#fff;
+	border:1px solid #000;
+}
+.log-bottom-cotent{
+	margin-top:15px;
+}
+/* end login page css */
+.copy-write{
+	display:none !important;
+}
+.footer{
+	background:#444;
+	background-size:cover;
+	display:inline-block;
+	width:100%;
+	padding:40px 0px 0px;
+}
+.footer-section h6{
+	border-bottom:1px solid #FFF;
+	padding-bottom:10px;
+	margin-bottom:10px;
+	color:#fff;
+}
+.footer-section p{
+	font-size:12px;
+	font-family:Poppins-L;
+	line-height:26px;
+	color:#fff;
+}
+.service-link a{
+	display:inline-block;
+	width:100%;
+	color:#fff;
+	transition:ease 0.2s;
+	padding:5px 0px;
+}
+.service-link a:hover{
+	color:#35cbdf;
+}
+.custom{
+	border:0px;
+	height:40px;
+	box-shadow:0px 0px 0px;
+	border-radius:0px;
+	border-bottom:1px solid #fff;
+	background-color:transparent;
+	color:#fff;
+}
+.custom:hover, .custom:focus{
+	background-color:transparent;
+	box-shadow:0px 0px 0px;
+	border-bottom:1px solid red;
+}
+.custome-input{
+	border:0px;
+	height:40px;
+	box-shadow:0px 0px 0px;
+	border-radius:0px;
+	border-bottom:1px solid #000;
+	background-color:transparent;
+	color:#000;
+}
+.custome-input:hover, .custome-input:focus{
+	background-color:transparent;
+	box-shadow:0px 0px 0px;
+	border-bottom:1px solid #35cbdf;
+}
+.form-group a{
+	margin-top:5px;
+}
+.copy-write{
+	background-color:#e1e1e1;
+	padding:5px 0px;
+	display:inline-block;
+	width:100%;
+	margin-top:20px;
+	text-align:center;
+}
+.copy-write p{
+	margin:0px;
+}
+.latest-section{
+	padding:30px 0px;
+		margin-top:0px;
+}
+
+    </style>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+	<link rel="stylesheet" href="css/style.css">
+	<link href="css/font-awesome.min.css" rel="stylesheet">
+	<link href="css/animation-1.css" rel="stylesheet">
+    <title>Document</title>
+</head>
+
+<body>
+    
+    <nav class="navbar navbar-expand-md secound-head top-nav">
+        <div class="container">
+                <ul class="navbar-nav ml-auto">
+                  <li class="nav-item ">
+                    <input type="image" src="images\Recreapp_Elements_necesitas_ayuda.svg" name="ayuda" width="100" height="30" alt="ayuda" style="margin-right: -150px;"/>
+                  </li>
+                </ul>
+              </div>	
+        </div>
+    </nav>
+    <div class="login-page">
+        <div class="container">
+            <div class="row">
+                <div class="col-xl-10 m-auto col-sm-5 col-12">
+                    <div class="log-box">
+                        <div class="row">
+                            <div class="col-xl-5 col-sm-5 col-12 pad-right-0">
+                                <div class="logo-back">
+									<img src="images\Recreapp_Elements_login_fondo.svg"style="width:100% " alt="">
+                                    <img src="images\Recreapp_Elements_navbar_logo-recrea.svg" style="position: absolute;top:50%;left:20px;width: 200px	;"alt="">
+                                </div>
+                            </div>
+                            <div class="col-xl-7 col-sm-7 col-12 pad-left-0">
+                                <form action="/register" method="post">
+									<h2>Register</h2>
+									<div class="section">
+										<div class="title">Username</div>
+										<div class="field"><input type="text" id="username" name="username"></div>
+									</div>
+									<div class="section">
+										<div class="title">Password</div>
+										<div class="field"><input type="text" id="password" name="password"></div>
+									</div>
+									<div class="section">
+										<div class="button"><input type="submit"value="registrar usuario"></div>
+									</div>
+                                    <div class="log-bottom-cotent">
+                                        <p>tienes cuenta?<a href="index.html">Login</a>
+                                    <p>eres administrador?<a href="forgotpassword.html" class="pull-right">ingresa aqui</a>
+                                    </p>
+                                    </p>
+                                    </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
